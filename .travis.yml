@@ -13,7 +13,7 @@ install:
    - git config user.email 'travis@nowhere.dne'
 
    # avoid dzil iff our perl < v5.10
-   - perl -e '$^V lt v5.10' && { cpanm --installdeps . && exit 0 }
+   - perl -e '$^V lt v5.10' && { cpanm --installdeps . ; exit 0 ; }
 
    # Deal with all of the DZIL dependancies, quickly and quietly
    - cpanm --force --verbose Directory::Scratch
